@@ -1,6 +1,6 @@
 CREATE TABLE vocabularies(
    vocab_id BIGINT AUTO_INCREMENT PRIMARY KEY,
-   word VARCHAR(100) NOT NULL,
+   word VARCHAR(100) COLLATE utf8mb4_0900_as_cs NOT NULL,
    pos      VARCHAR(100) NOT NULL,
    phonetic VARCHAR(100),
    audio_url TEXT,
@@ -9,8 +9,8 @@ CREATE TABLE vocabularies(
 
 CREATE TABLE definitions(
 	def_id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    word_desc TEXT NOT NULL,
-    examples TEXT
+    word_desc LONGTEXT NOT NULL,
+    examples LONGTEXT
 );
 
 CREATE TABLE vocab_def(

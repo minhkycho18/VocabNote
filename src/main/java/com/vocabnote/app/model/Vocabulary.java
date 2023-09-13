@@ -32,7 +32,18 @@ public class Vocabulary {
     @ManyToMany
     @JoinTable(
             name = "vocab_def",
-            joinColumns = @JoinColumn(name = "vocab_id"),
-            inverseJoinColumns = @JoinColumn(name = "def_id"))
+            joinColumns = @JoinColumn(name = "vocab_id", referencedColumnName = "vocabId"),
+            inverseJoinColumns = @JoinColumn(name = "def_id", referencedColumnName = "defId"))
     List<Definition> definitions;
+
+    @Override
+    public String toString() {
+        return "\nVocabulary{" +
+                "vocabId=" + vocabId +
+                ", word='" + word + '\'' +
+                ", pos='" + pos + '\'' +
+                ", phonetic='" + phonetic + '\'' +
+                ", audioUrl='" + audioUrl + '\'' +
+                '}';
+    }
 }
