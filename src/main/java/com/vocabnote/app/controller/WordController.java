@@ -138,7 +138,6 @@ public class WordController {
             fields.forEachRemaining(field -> {
                 try {
                     WordJson wordJson = mapper.treeToValue(field.getValue(), WordJson.class);
-//                    System.out.println("=================================================================");
                     System.out.println(wordJson.getWord());
                     if (wordJson.getMeanings() != null) {
                         wordJson.getMeanings().forEach(meaning -> {
