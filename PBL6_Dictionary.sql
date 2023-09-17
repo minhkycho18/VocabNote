@@ -22,3 +22,15 @@ CREATE TABLE vocab_def(
 );
 
 
+ALTER TABLE vocabularies
+DROP COLUMN phonetic,
+DROP COLUMN audio_url;
+
+ALTER TABLE vocabularies
+ADD COLUMN phonetics_us VARCHAR(100),
+ADD COLUMN phonetics_uk VARCHAR(100),
+ADD COLUMN audio_us TEXT,
+ADD COLUMN audio_uk TEXT;
+
+
+

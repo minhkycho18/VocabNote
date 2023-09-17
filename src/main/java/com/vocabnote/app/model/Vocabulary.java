@@ -24,10 +24,16 @@ public class Vocabulary {
     private String pos;
 
     @Column
-    private String phonetic;
+    private String phonetics_us;
 
-    @Column(name = "audio_url")
-    private String audioUrl;
+    @Column
+    private String phonetics_uk;
+
+    @Column
+    private String audio_us;
+
+    @Column
+    private String audio_uk;
 
     @ManyToMany
     @JoinTable(
@@ -42,8 +48,10 @@ public class Vocabulary {
                 "vocabId=" + vocabId +
                 ", word='" + word + '\'' +
                 ", pos='" + pos + '\'' +
-                ", phonetic='" + phonetic + '\'' +
-                ", audioUrl='" + audioUrl + '\'' +
+                ", phonetic_us='" + phonetics_us + '\'' +
+                ", phonetic_uk='" + phonetics_uk + '\'' +
+                ", audio_us='" + audio_us + '\'' +
+                ", audio_uk='" + audio_uk + '\'' +
                 '}';
     }
 }

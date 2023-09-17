@@ -8,7 +8,7 @@ import lombok.Data;
 public class OxfordVocabDTO {
     private String word;
     private String pos;
-    private String phonUs;
+    private String phoneUs;
     private String phoneUk;
     private String phonUsUrl;
     private String phonUkUrl;
@@ -18,7 +18,7 @@ public class OxfordVocabDTO {
         return "\nOxfordVocabDTO{" +
                 "\nword='" + word + '\'' +
                 "\n, pos='" + pos + '\'' +
-                "\n, phonUs='" + phonUs + '\'' +
+                "\n, phoneUs='" + phoneUs + '\'' +
                 "\n, phoneUk='" + phoneUk + '\'' +
                 "\n, phonUsUrl='" + phonUsUrl + '\'' +
                 "\n, phonUkUrl='" + phonUkUrl + '\'' +
